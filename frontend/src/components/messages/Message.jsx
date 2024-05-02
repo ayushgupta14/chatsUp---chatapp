@@ -11,7 +11,7 @@ const Message = ({ message }) => {
     const formattedTime = extractTime(message.createdAt);
     const profilePic = fromMe ? authUser.profilepic : selectedConversation?.profilepic;
     const bubblebg = fromMe ? 'bg-blue-500' : '';
-    
+    const shakeClass = message.shouldShake ? "shake" : "";
 
 
   return (
@@ -23,7 +23,7 @@ const Message = ({ message }) => {
 				alt='chat bubble component' />
             </div>
         </div>
-        <div className={`chat-bubble text-white pb-2 ${bubblebg}`}>
+        <div className={`chat-bubble text-white pb-2 ${bubblebg} ${shakeClass} `}>
             {message.message}
         </div>
         <div className='chat-footer opacity-50 text-xs flex gap-1 items-center'>
