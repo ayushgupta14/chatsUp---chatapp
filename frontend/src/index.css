@@ -4,10 +4,62 @@
 
 body {
 	/* background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url("../public/bg.jpg"); */
-	background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url("bg.jpg");
+	background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2));
 	background-repeat: no-repeat;
 	background-size: cover;
 	background-position: center;
+	animation-name: slideshow;
+	animation-duration: 250s;
+	animation-timing-function: ease-in-out;
+	animation-iteration-count: infinite;
+}
+
+@keyframes slideshow {
+	0% {
+		background-image: url("bg11.jpg");
+	}
+	10% {
+		background-image: url("bg2.jpg");
+	}
+	20% {
+		background-image: url("bg3.jpg");
+	}
+	30% {
+		background-image: url("bg4.jpg");
+	}
+	40% {
+		background-image: url("bg5.jpg");
+	}
+	50% {
+		background-image: url("bg6.jpg");
+	}
+	60% {
+		background-image: url("bg7.jpg");
+	}
+	70% {
+		background-image: url("bg8.jpg");
+	}
+	80% {
+		background-image: url("bg9.jpg");
+	}
+	90% {
+		background-image: url("bg10.jpg");
+	}
+	100% {
+		background-image: url("bg6.jpg");
+	}
+}
+
+.backdrop-blur-lg {
+    --tw-backdrop-blur: blur(3px);
+}
+
+.bg-custom {
+	background-color: #AF8260;
+}
+
+.custom-text {
+	color: #AF8260;
 }
 
 /* dark mode looking scrollbar */
@@ -56,5 +108,20 @@ body {
 	40%,
 	60% {
 		transform: translate3d(4px, 0, 0);
+	}
+}
+
+
+.isVisible {
+	display: block;
+}
+
+.isNotVisible {
+	display: none !important;
+}
+
+@media screen and (max-width:640px) {
+	.isVisible {
+		display: none !important;
 	}
 }

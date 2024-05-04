@@ -18,8 +18,8 @@ const Login = () => {
     <div className='flex flex-col items-center justify-center min-w-96 mx-auto'>
       <div className='w-full p-6 rounded-lg shadow-mg bg-gray-400 bg-clip-padding backdrop-filter backdrop-blur-lg bg-opacity-0'>
         <h1 className='text-3xl font-semibold text-center text-gray-300 '>
-          Login
-          <span className='text-blue-400'> ChatApp</span>
+          Login To
+          <span className='custom-text'> ChatsUP</span>
         </h1>
         
         <form onSubmit={HandleSubmit}>
@@ -36,6 +36,7 @@ const Login = () => {
           <div>
             <label className='label p-4'>
               <span className='label-text text-base'>Password</span>
+              
             </label>
             <input type="password" placeholder='Enter Password' className='input input-bordered w-full h-10' 
               value={password}

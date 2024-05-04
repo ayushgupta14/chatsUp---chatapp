@@ -7,13 +7,13 @@ const converation = ({conversation, lastIdx, emoji}) => {
 
   const isSelected = selectedConversation?._id === conversation._id;
   const {onlineUsers} = useSocketContext();
-  const isOnline = onlineUsers.includes(conversation._id)
+  const isOnline = onlineUsers.includes(conversation._id);
 
 
   return (
     <>
-      <div className={`flex items-center gap-2 hover:bg-sky-500 cursor-pointer p-2 py-1
-      ${isSelected ? "bg-sky-500 text-white" : "" }` } onClick={() => setSelectedConversation(conversation)} >
+      <div className={`flex items-center gap-2 hover:bg-orange-300 cursor-pointer p-2 py-1
+      ${isSelected ? "bg-custom text-white" : "" }` } onClick={() => setSelectedConversation(conversation)} >
         
         <div className={`avatar ${isOnline ? "online" : ""}`}>
           <div className='w-12 rounded-full '>
